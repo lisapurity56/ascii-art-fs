@@ -37,9 +37,10 @@ func main() {
 	} else {
 		//Stand mode & single argument mode
 		inputStr = args[0]
-		if argCount == 2 {
+		switch argCount {
+		case 2:
 			bannerName = args[1]
-		} else if argCount == 3 {
+		case 3:
 			//3 args provided but first isn't --output
 			printUsage()
 			return
